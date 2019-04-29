@@ -23,7 +23,7 @@ Funcionalidade: Remover do carrinho
         | 0    | "R$ 18,40" |
         | 1    | "R$ 24,60" |
         | 2    | "R$ 11,20" |
-        
+
     Cenario: Remover todos os itens
 
         Quando eu removo todos os itens

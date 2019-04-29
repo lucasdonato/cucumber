@@ -3,11 +3,11 @@ Dado("que temos os seguintes restaurantes") do |table|
 end
 
 Quando("acesso a lista de restaurantes") do
-  visit "/restaurants"
+  @rest_list_page.load
 end
 
 Então("devo ver todos os restaurantes desta lista") do
-  restaurants = all(".restaurant-item")
+  restaurants = @rest_list_page.list
 
   @restaurant_data.each_with_index do |value, index|
     expect(restaurants[index]).to have_text value["nome"].upcase
