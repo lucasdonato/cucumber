@@ -7,3 +7,4 @@ chrome: -p dot BROWSER=chrome
 firefox: -p dot BROWSER=firefox
 chrome_headless: -p dot BROWSER=chrome_headless
 firefox_headless: -p dot BROWSER=firefox_headless
+#posso usar também ao invés de dot => pretty
