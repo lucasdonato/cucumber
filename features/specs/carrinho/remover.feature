@@ -1,6 +1,6 @@
 #language: pt
 
-@bread_bakery @temp
+@bread_bakery
 Funcionalidade: Remover do carrinho
     Para que eu possa manter meu carrinho apenas com itens desejados
     Sendo um cliente que dessitiu de um ou mais produtos

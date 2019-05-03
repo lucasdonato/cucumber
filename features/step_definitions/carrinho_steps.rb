@@ -54,9 +54,7 @@ Quando("eu removo somente o {int}") do |item|
 end
 
 Quando("eu removo todos os itens") do
-  @product_list.each_with_index do |value, idx|
-    @rest_page.cart.remove_item(idx)
-  end
+  @rest_page.cart.clean
 end
 
 Quando("eu limpo o meu carrinho") do
@@ -65,4 +63,32 @@ end
 
 Então("vejo a seguinte mensagem no carrinho {string}") do |mensagem|
   expect(@rest_page.cart.box).to have_text mensagem
+end
+
+Dado("que adicionei os seguintes itens no carrinho:") do |table|
+  @product_list = table.hashes
+  steps %{
+    Quando eu adiciono todos os itens
+  }
+end
+
+Quando("eu fecho o meu carrinho") do
+  @rest_page.cart.close
+end
+
+Então("o valor total de itens deve ser igual a {string}") do |total_items|
+  res = @order_page.cost_shipping[0]
+  expect(res).to have_text total_items
+end
+
+Então("o valor do frete deve ser igual a {string}") do |shipping|
+  expect(
+    @order_page.cost_shipping[1]
+  ).to have_text shipping
+end
+
+Então("o valor total da compra deve ser igual a {string}") do |total_cart|
+  expect(
+    @order_page.cost_shipping[2]
+  ).to have_text total_cart
 end
