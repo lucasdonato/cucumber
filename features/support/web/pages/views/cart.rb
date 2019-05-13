@@ -1,5 +1,3 @@
-
-
 class CartView
   include Capybara::DSL
 
