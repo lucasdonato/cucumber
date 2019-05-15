@@ -17,7 +17,7 @@ Capybara.configure do |config|
     @driver = :selenium_headless
   end
 
-#define se o teste será rodado em ambiente de produção ou homologação
+#define se o teste será rodado em ambiente de produção ou homologação#
   case @ambiente
     when 'producao'
       @host = 'https://enjoeat-sp4.herokuapp.com'
