@@ -1,9 +1,14 @@
-
-class OrderPage
+require 'site_prism'
+class OrderPage < SitePrism::Page
   include Capybara::DSL
 
+  element :nome,"input[formcontrolname=name]"
+
   def fill_user_data(user)
-    find("input[formcontrolname=name]").set user[:nome]
+    
+    #utilizando siteprism
+    nome.set user[:nome]
+    #find("input[formcontrolname=name]").set user[:nome]
     find("input[formcontrolname=email]").set user[:email]
     find("input[formcontrolname=emailConfirmation]").set user[:email]
     find("input[formcontrolname=address]").set user[:rua]

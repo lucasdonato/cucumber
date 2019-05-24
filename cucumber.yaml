@@ -12,3 +12,5 @@ chrome_headless: -p dot BROWSER=chrome_headless
 firefox_headless: -p dot BROWSER=firefox_headless
 producao: -p dot AMBIENTE=producao
 homologacao: -p dot AMBIENTE=homologacao
+
+#criar possibilidade de detalhar

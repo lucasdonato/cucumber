@@ -17,7 +17,7 @@ Funcionalidade: Adicionar ao carrinho
 
     Cenario: Adicionar 2 unidades
 
-        Dado que o produto desejado é "Donut"
+        Dado que o produto desejado é "Donut" 
         E o valor do produto é de "R$ 2,50"
         Quando eu adiciono 2 unidade(s)
         Então deve ser adicionado 2 unidade(s) deste item
