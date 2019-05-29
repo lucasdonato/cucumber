@@ -2,18 +2,23 @@ require 'site_prism'
 class OrderPage < SitePrism::Page
   include Capybara::DSL
 
+  #definiindo os elementos com siteprism
   element :nome,"input[formcontrolname=name]"
+  element :email,"input[formcontrolname=email]"
+  element :email_confirmation,"input[formcontrolname=emailConfirmation]"
+  element :rua,"input[formcontrolname=address]" 
+  element :numero,"input[formcontrolname=number]"
+  element :complemento, "input[formcontrolname=optionalAddress]"
 
   def fill_user_data(user)
     
-    #utilizando siteprism
     nome.set user[:nome]
-    #find("input[formcontrolname=name]").set user[:nome]
-    find("input[formcontrolname=email]").set user[:email]
-    find("input[formcontrolname=emailConfirmation]").set user[:email]
-    find("input[formcontrolname=address]").set user[:rua]
-    find("input[formcontrolname=number]").set user[:numero]
-    find("input[formcontrolname=optionalAddress]").set user[:complemento]
+    email.set user[:email]
+    email_confirmation.set user [:email]
+    rua.set user[:rua]
+    numero.set user[:numero]
+    complemento.set user[:complemento]
+
   end
 
   def select_pay(payment)
