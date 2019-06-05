@@ -1,7 +1,8 @@
 require 'capybara'
 require 'capybara/cucumber'
 require 'selenium-webdriver'
-
+require 'pry'
+#binding.pry para debugar
 @browser = ENV['BROWSER']
 @ambiente = ENV['AMBIENTE']
 
