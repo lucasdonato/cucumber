@@ -1,0 +1,4 @@
+log/*.html
+log/*.json
+log/*.png
+scripts
