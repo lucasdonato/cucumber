@@ -29,5 +29,5 @@ Capybara.configure do |config|
   config.default_driver = @driver
   # config.app_host = "https://enjoeat-sp4.herokuapp.com"
   config.app_host = @host
-  config.default_max_wait_time = 10
+  config.default_max_wait_time = 20
 end
