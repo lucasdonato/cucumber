@@ -12,7 +12,7 @@ echo "http://dl-4.alpinelinux.org/alpine/v3.9/community" >> /etc/apk/repositorie
     
 # RUN apk update && \
 #   apk add curl unzip libexif udev chromium chromium-chromedriver xvfb
-RUN apk add --update \
+apk add --update \
   build-base \
   libxml2-dev \
   libxslt-dev \
