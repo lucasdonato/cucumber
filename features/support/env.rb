@@ -13,6 +13,7 @@ Capybara.configure do |config|
   when 'firefox'
     @driver = :selenium
   when 'chrome_headless'
+    #DEVEMOS USAR ESSA CONFIGURAÇÃO PARA O GOOGLE CHROME NÃO QUBRAR (CRASH)
     Capybara.register_driver :selenium_chrome_headless do |app|
       chrome_options =  Selenium::WebDriver::Chrome::Options.new.tap do |options|
           options.add_argument "--headless"
@@ -38,5 +39,5 @@ Capybara.configure do |config|
   config.default_driver = @driver
   # config.app_host = "https://enjoeat-sp4.herokuapp.com"
   config.app_host = @host
-  config.default_max_wait_time = 20
+  config.default_max_wait_time = 60
 end
