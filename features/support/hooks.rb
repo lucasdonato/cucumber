@@ -18,11 +18,11 @@ end
 
 After do |scenario|
   #if scenario.failed?
-    #shot_file = page.save_screenshot("log/screenshot.png")
-    #shot_b64 = Base64.encode64(File.open(shot_file, "rb").read)
-    #embed(shot_b64, "image/png", "Screenshot") # Cucumber anexa o screenshot no report
+    shot_file = page.save_screenshot("log/screenshots/#{scenario.__id__}.png")
+    shot_b64 = Base64.encode64(File.open(shot_file, "rb").read)
+    embed(shot_b64, "image/png", "Screenshot") # Cucumber anexa o screenshot no report
   
-    screenshot = page.save_screenshot("log/screenshots/#{scenario.__id__}.png")
-    embed(screenshot, "image/png", "Screenshot")
+    #screenshot = page.save_screenshot("log/screenshots/#{scenario.__id__}.png")
+    #embed(screenshot, "image/png", "Screenshot")
     #end
 end
