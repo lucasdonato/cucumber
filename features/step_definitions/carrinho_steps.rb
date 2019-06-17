@@ -13,8 +13,10 @@ Quando("eu adiciono {int} unidade\\(s)") do |quantidade|
 end
 
 Então("deve ser adicionado {int} unidade\\(s) deste item") do |quantidade|
- #verificar a saída no jenkins
+  puts quantidade 
+  puts @rest_page.cart.box.text
   puts "(#{quantidade}x) #{@produto_nome}"
+  
   expect(@rest_page.cart.box).to have_text "(#{quantidade}x) #{@produto_nome}"
 end
 
