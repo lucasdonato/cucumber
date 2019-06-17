@@ -1,8 +1,8 @@
 require "base64"
 
 Before do
-  #page.current_window.resize_to(1440, 900)
-  page.driver.browser.manage.window.maximize
+  page.current_window.resize_to(1440, 900)
+  #page.driver.browser.manage.window.maximize
   @rest_list_page = RestaurantListPage.new
   @rest_page = RestaurantPage.new
   @order_page = OrderPage.new
