@@ -1,16 +1,11 @@
 ---
-  #caso não seja passado nenhum parametro, essa será a 
-  #URL padrão#
-  #podemos alterar o dot para bdd.
+
 default: -p bdd -p bdd BROWSER=chrome_headless -p dot AMBIENTE=producao
 bdd: --format pretty
 dot: --format progress
-html:  --format html --out=log/report.html
 chrome: -p dot BROWSER=chrome
 firefox: -p dot BROWSER=firefox
 chrome_headless: -p dot BROWSER=chrome_headless
 firefox_headless: -p dot BROWSER=firefox_headless
 producao: -p dot AMBIENTE=producao
 homologacao: -p dot AMBIENTE=homologacao
-
-#criar possibilidade de detalhar
