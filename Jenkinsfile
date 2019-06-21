@@ -18,7 +18,8 @@ pipeline {
         }
         stage("Tests") {
             steps {
-                sh "bundle exec rake specs"
+                //sh "bundle exec rake specs"
+                sh 'bundle exec rake specs["-t @bread_bakery","-p chrome","-p producao"]'
             }
             post {
                 always {
