@@ -15,9 +15,7 @@ pipeline {
                 sh "gem install bundler -v 2.0.2"
                 sh "bundle install"
                 //limpando os registros de logs para evitar lixos;
-                sh "docker exec -it jenkins sh"
                 sh "rm -rf /var/jenkins_home/workspace/cucumber/log/*"
-                sh "exit"
             }
         }
         stage("Tests") {
