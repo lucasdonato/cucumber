@@ -20,6 +20,9 @@ pipeline {
         }
         stage("Tests") {
             steps {
+                slackSend channel: "#automacao-de-testes",
+                        color: 'SUCCESS',
+                        message: "Iniciando execução dos testes.."
                 sh "bundle exec rake specs"
             }
             post {
