@@ -5,7 +5,8 @@ group :test do
   gem "cucumber", "3.1.2"
   gem "rspec", "3.7.0"
   gem "selenium-webdriver", "3.141"
-  gem 'site_prism', '~> 3.2'
-  gem 'pry', '~> 0.12.2'
-  gem 'rake', '~> 12.3', '>= 12.3.2'
+  gem "site_prism", "~> 3.2"
+  gem "pry", "~> 0.12.2"
+  gem "rake", "~> 12.3", ">= 12.3.2"
+  gem "report_builder"
 end
