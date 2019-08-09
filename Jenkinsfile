@@ -5,8 +5,8 @@ pipeline {
     agent {
         docker {
             image "ruby:alpine"
-            args "--network=skynet"
         }
+         tools {nodejs "node"}
     }
     stages {
         stage("Build") {
