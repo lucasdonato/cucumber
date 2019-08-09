@@ -5,8 +5,7 @@ pipeline {
   stages {
     stage('preflight') {
       steps {
-          nodejs(nodeJSInstallationName: 'Node 12.8', configId: '<config-file-provider-id>') { sh 'npm install' }
-        echo sh(returnStdout: true, script: 'env')
+          nodejs(nodeJSInstallationName: 'Node 12.8.0', configId: '<config-file-provider-id>') { sh 'npm install' }
         sh 'node -v'
       }
     }
