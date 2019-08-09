@@ -19,6 +19,17 @@ pipeline {
                 sh "rm -rf /var/jenkins_home/workspace/cucumber/log/*"
             }
         }
+
+        node('node') {          
+            stage('Test'){
+                    env.NODE_ENV = "test"                       
+                    sh 'node -v'
+                    sh 'npm prune'
+                    sh 'npm install'
+                    sh 'npm test'
+                }
+            }     
+
         stage("Tests") {
             steps {
                 //mensagem disparada antes da execução dos testes..
