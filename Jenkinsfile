@@ -25,7 +25,7 @@ pipeline {
                 //slackSend channel: "#automacao-de-testes",
                         //color: 'good',
                      //   message: " Iniciando execucao do testes..\n Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}"
-                sh "bundle exec rake specs['-t @cardapio']"
+                sh "bundle exec rake specs"
             }
            // post {
              //   always {                  
