@@ -1,10 +1,11 @@
 pipeline {
   agent any
   tools {nodejs "node"}
-  nodejs(nodeJSInstallationName: 'Node X.Y', configId: '<config-file-provider-id>') { sh 'npm install' }
+  
   stages {
     stage('preflight') {
       steps {
+          nodejs(nodeJSInstallationName: 'Node X.Y', configId: '<config-file-provider-id>') { sh 'npm install' }
         echo sh(returnStdout: true, script: 'env')
         sh 'node -v'
       }
