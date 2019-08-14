@@ -6,11 +6,11 @@ pipeline {
         docker {
             image "ruby:alpine"
             args "--network=skynet"
-        }
-        tools {nodejs "node"}      
+        }        
     }
     stages {
         stage("Build") {
+            tools {nodejs "node"}   
             steps {
                 sh 'npm config ls'
                 sh "chmod +x build/alpine.sh"
