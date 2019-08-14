@@ -6,12 +6,13 @@ pipeline {
         docker {
             image "ruby:alpine"
             args "--network=skynet"
-        }      
+        }
+        tools {nodejs "node"}      
     }
     stages {
         stage("Build") {
             steps {
-                sh "npm -v"
+                sh 'npm config ls'
                 sh "chmod +x build/alpine.sh"
                 sh "./build/alpine.sh"
                 sh "gem install bundler -v 2.0.2"
