@@ -10,9 +10,7 @@ pipeline {
     }
     stages {
         stage("Build") {
-            tools {nodejs "node"}   
             steps {
-                sh 'npm config ls'
                 sh "chmod +x build/alpine.sh"
                 sh "./build/alpine.sh"
                 sh "gem install bundler -v 2.0.2"
