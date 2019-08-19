@@ -31,7 +31,7 @@ Capybara.configure do |config|
   #define se o teste será rodado em ambiente de produção ou homologação#
   case @ambiente
   when "producao"
-    @host = "http://enjoeat:4000"
+    @host = "http://localhost:4000"
   when "homologacao"
     @host = "https://enjoeat-sp3.herokuapp.com"
   end
