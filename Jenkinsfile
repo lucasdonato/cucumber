@@ -15,6 +15,7 @@ pipeline {
                 sh "./build/alpine.sh"
                 sh "gem install bundler -v 2.0.2"
                 sh "bundle install"
+                sh "bundle update"
                 //limpando os registros de logs para evitar lixos;
                 sh "rm -rf /var/jenkins_home/workspace/cucumber/log/*"
             }
