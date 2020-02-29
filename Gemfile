@@ -7,6 +7,6 @@ group :test do
   gem "selenium-webdriver", "3.141"
   gem "site_prism", "~> 3.2"
   gem "pry", "~> 0.12.2"
-  gem "rake", "~> 12.3", ">= 12.3.2"
+  gem "rake", "~> 12.3"
   gem "report_builder"
 end
